@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onfocus Event</title>
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+        label{
+            display: block;
+            margin: 5px 0;
+        }
+        label span{
+            display: none;
+        }
+    </style>
+    <script>
+    $(document).ready(function(){
+        $("input").focus(function(){  // focus - form events
+            $(this).next("span").show().fadeOut("slow");// jquery effects
+        });
+    });
+    </script>
+</head>
+<body>
+    
+    
+    
+     <form>
+            <label>Email: <input type="text"> <span>focus fire</span></label>
+            <label>Password: <input type="password"> <span>focus fire</span></label>
+            <label><input type="submit" value="Sign In"> <span>focus fire</span></label>
+        </form>
+        <p><strong>Note:</strong> Click on the form control or press the "Tab" key to set focus.</p>
+</body>
+</html>
